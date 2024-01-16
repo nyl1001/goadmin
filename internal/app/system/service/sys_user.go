@@ -32,6 +32,7 @@ type (
 		IsNicknameAvailable(ctx context.Context, nickname string, userId int64) (bool, error)
 		// GetProfile retrieves and returns current user info in session.
 		GetProfile(ctx context.Context) *entity.SysUser
+		GetUserProfile(ctx context.Context) (sUser *entity.SysUser, err error)
 		GetUserById(ctx context.Context, userId int64) (user *model.SysUserRes, err error)
 		GetOneUserById(ctx context.Context, id int64) (user *entity.SysUser, err error)
 		GetUserListByDeptId(ctx context.Context, req *v1.GetUserListReq) (userList *v1.GetUserListRes, err error)

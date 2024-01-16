@@ -2,12 +2,13 @@ package user
 
 import (
 	"context"
-	"github.com/gogf/gf/v2/errors/gerror"
-	"github.com/gogf/gf/v2/util/gconv"
 	v1 "go-vue-admin/api/v1"
 	"go-vue-admin/internal/app/system/consts"
 	"go-vue-admin/internal/app/system/model"
 	"go-vue-admin/internal/app/system/service"
+
+	"github.com/gogf/gf/v2/errors/gerror"
+	"github.com/gogf/gf/v2/util/gconv"
 )
 
 type Controller struct{}
@@ -60,8 +61,12 @@ func (c *Controller) CheckNickName(ctx context.Context, req *v1.CheckNickNameReq
 
 // Profile returns the user profile.
 func (c *Controller) Profile(ctx context.Context, req *v1.ProfileReq) (res *v1.ProfileRes, err error) {
+	sUser, err := service.SysUser().GetUserProfile(ctx)
+	if err != nil {
+		return nil, err
+	}
 	res = &v1.ProfileRes{
-		//SysUser: service.User().GetProfile(ctx),
+		SysUser: sUser,
 	}
 	return
 }

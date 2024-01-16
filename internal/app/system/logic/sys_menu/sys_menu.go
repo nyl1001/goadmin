@@ -56,6 +56,7 @@ var SpecialApiPath = map[string]bool{
 	"get/system/user/deptTree":              true,
 	"get/system/dept/list/exclude/{deptId}": true,
 	"post/logout":                           true,
+	"get/user/profile":                      true,
 }
 
 // 根据rold_id获取perms

@@ -269,6 +269,18 @@ func (s *sSysUser) IsNicknameAvailable(ctx context.Context, nickname string, use
 func (s *sSysUser) GetProfile(ctx context.Context) *entity.SysUser {
 	return service.Session().GetUser(ctx)
 }
+
+// GetUserProfile retrieves and returns current user info in session.
+func (s *sSysUser) GetUserProfile(ctx context.Context) (sUser *entity.SysUser, err error) {
+	userId := gconv.Int64(ctx.Value(consts.CtxAdminId))
+	err = g.Try(ctx, func(ctx context.Context) {
+		//用户用户信息
+		err = dao.SysUser.Ctx(ctx).Where(dao.SysUser.Columns().UserId, userId).Scan(&sUser)
+		utility.WriteErrLog(ctx, err, "获取用户数据失败")
+	})
+	return
+}
+
 func (s *sSysUser) GetUserById(ctx context.Context, userId int64) (user *model.SysUserRes, err error) {
 	err = g.Try(ctx, func(ctx context.Context) {
 		//用户用户信息
