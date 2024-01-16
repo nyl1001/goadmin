@@ -235,7 +235,7 @@ function handleGenTable(row) {
       proxy.$modal.msgSuccess("成功生成到自定义路径：" + row.genPath);
     });
   } else {
-    proxy.$download.zip("/tool/gen/batchGenCode?tables=" + tbNames, "goadmin.zip");
+    proxy.$download.zip("/tool/gen/batchGenCode?tables=" + tbNames, "心理测评.zip");
   }
 }
 /** 初始化生成数据操作 */

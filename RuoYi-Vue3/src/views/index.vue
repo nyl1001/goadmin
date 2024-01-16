@@ -7,7 +7,7 @@
     </el-row>
     <el-row :gutter="20">
       <el-col :sm="24" :lg="12" style="padding-left: 20px">
-        <h2>goadmin后台管理框架</h2>
+        <h2>心理测评后台管理框架</h2>
         <p>
 
         </p>

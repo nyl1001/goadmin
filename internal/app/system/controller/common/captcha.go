@@ -33,7 +33,7 @@ func (c *captchaController) CaptchaImage(ctx context.Context, req *v1.CaptchaReq
 // CaptchaImage 获取验证码
 func (c *captchaController) Test(ctx context.Context, req *v1.TestReq) (res *v1.TestRes, err error) {
 	err = service.SysMenu().InitApiPath(ctx)
-	//ghttp.RequestFromCtx(ctx).Response.ServeFileDownload("temp/down/1/goadmin.zip")
+	//ghttp.RequestFromCtx(ctx).Response.ServeFileDownload("temp/down/1/心理测评.zip")
 	//ghttp.RequestFromCtx(ctx).Response.Write("nihao")
 	//return
 	//db := g.DB()

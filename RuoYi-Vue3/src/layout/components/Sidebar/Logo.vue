@@ -25,7 +25,7 @@ defineProps({
   }
 })
 
-const title = ref('goadmin管理系统');
+const title = ref('心理测评管理系统');
 const settingsStore = useSettingsStore();
 const sideTheme = computed(() => settingsStore.sideTheme);
 </script>

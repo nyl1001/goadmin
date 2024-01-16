@@ -1,8 +1,8 @@
 {
   "name": "go-admin",
   "version": "1.0.0",
-  "description": "goadmin管理系统",
-  "author": "goadmin",
+  "description": "心理测评管理系统",
+  "author": "心理测评",
   "license": "MIT",
   "scripts": {
     "dev": "vite",

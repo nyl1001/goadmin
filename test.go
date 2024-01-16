@@ -17,9 +17,9 @@ func main() {
 	fmt.Println(aa)
 
 	//getModule()
-	//err := gcompress.ZipPath("temp/down/202309051513511/", consts.GenCodeDir+"1/goadmin.zip")
+	//err := gcompress.ZipPath("temp/down/202309051513511/", consts.GenCodeDir+"1/心理测评.zip")
 	//err := gcompress.ZipPath("temp/down/202309051513511/", consts.GenCodeZipDir+"1/govueadmin.zip")
-	//err := gcompress.ZipPath("temp/down/202309051513511/", consts.GenCodeDir+"1/goadmin.zip")
+	//err := gcompress.ZipPath("temp/down/202309051513511/", consts.GenCodeDir+"1/心理测评.zip")
 	//fmt.Println(err)
 
 	//userId := "2"
